@@ -10,12 +10,39 @@ body html {
     align-items: center;
 }
 
+body {
+    background-color: #D66853;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #364156;
+}
+
+h2 {
+    text-align: center;
+    color: #364156;
+}
+
+footer {
+    color: #364156;
+}
+
+/*img {
+    height: 50px;
+    width: 50px;
+    padding-top: 10px;
+} */
+
 .pimg1 {
-    background-image: url(./images/stairs.JPG);
+    background-image: url(./images/places/stairs.JPG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 600px;
+    min-height: 500px;
 
     /* fixed = parallax */
 
@@ -23,7 +50,7 @@ body html {
 }
 
 .pimg2 {
-    background-image: url(./images/yamaView.JPG);
+    background-image: url(./images/places/yamaView.JPG);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -36,7 +63,100 @@ body html {
 }
 
 .long {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 1000px;
-    background-color: white;
-    opacity: .5;
+}
+
+.myGrid {
+    /* border: solid 3px black; */
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    height: 50%;
+    width: 80%;
+    max-height: 500px;
+    max-width: 800px;
+    min-height: 300px;
+    min-width: 700px;
+    text-align: center;
+}
+
+.myGrid div {
+    /* border: solid 3px black; */
+    background-color: #212D40;
+}
+
+.col1 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.col2 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.col3 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.col4 {
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.box1 {
+    background-image: url(./images/foods/yakitori.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.box2 {
+    text-align: center;
+    color: white;
+}
+
+.box3 {
+    text-align: center;
+    color: white;
+}
+
+.box4 {
+    background-image: url(./images/foods/soba.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.box5{
+    background-image: url(./images/foods/misoRamen.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+.box6 {
+    text-align: center;
+    color: white;
+}
+
+.box7 {
+    text-align: center;
+    color: white;
+}
+
+.box8{
+    background-image: url(./images/foods/cherry.JPG);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hideScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.hideScroll2 {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
