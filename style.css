@@ -10,3 +10,33 @@ body html {
     align-items: center;
 }
 
+.pimg1 {
+    background-image: url(./images/stairs.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+
+    /* fixed = parallax */
+
+    background-attachment: fixed;
+}
+
+.pimg2 {
+    background-image: url(./images/yamaView.JPG);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+.section-dark {
+    background-color: black;
+    height: 5px;
+}
+
+.long {
+    height: 1000px;
+    background-color: white;
+    opacity: .5;
+}
