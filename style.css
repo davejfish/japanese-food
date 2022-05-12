@@ -46,7 +46,8 @@ footer {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 700px;
+    min-height: 500px;
+    width: 100%;
 
     /* fixed = parallax */
 
@@ -74,177 +75,98 @@ footer {
     font-family: 'Roboto Flex', sans-serif;
 }
 
-.myGrid {
-    /* border: solid 3px black; */
+@supports (display: grid) {
+    @media screen and (min-width: 400px) {
+        .myGrid {
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    height: 50%;
-    width: 80%;
-    max-height: 500px;
-    max-width: 800px;
-    min-height: 300px;
-    min-width: 700px;
-    text-align: center;
+    width: 400px;
+    justify-content: center;
+    background-color: #364156;
+    grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "box1 box2"
+                    "box3 box4"
+                    "box5 box6"
+                    "box7 box8";
+    }
+    }
+
+    @supports (display: grid) {
+        @media screen and (min-width: 800px) {
+            .myGrid {
+                display: grid;
+                width: 800px;
+                justify-content: center;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "box1 box3 box5 box7"
+                    "box2 box4 box6 box8";
+            }
+        }
+    }
 }
 
-.myGrid div {
-    /* border: solid 3px black; */
-    background-color: #212D40;
-}
 
-.myGridPlaces {
-    /* border: solid 3px black; */
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    height: 50%;
-    width: 80%;
-    max-height: 500px;
-    max-width: 800px;
-    min-height: 300px;
-    min-width: 700px;
-    text-align: center;
-}
 
-.myGridPlaces div {
-    /* border: solid 3px black; */
-    background-color: #212D40;
-}
-
-.col1 {
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-
-.col2 {
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-
-.col3 {
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-
-.col4 {
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
 
 .box1 {
+    grid-area: box1;
     background-image: url(./images/foods/yakitori.JPG);
     background-size: cover;
     background-position: center;
+    height: calc(8em + 2vmin);
 }
 
 .box2 {
+    grid-area: box2;
     text-align: center;
     color: white;
+    height: calc(8em + 2vmin);
 }
 
 .box3 {
+    grid-area: box3;
     text-align: center;
     color: white;
+    height: calc(8em + 2vmin);
 }
 
 .box4 {
+    grid-area: box4;
     background-image: url(./images/foods/soba.JPG);
     background-size: cover;
     background-position: center;
+    height: calc(8em + 2vmin);
 }
 
 .box5{
+    grid-area: box5;
     background-image: url(./images/foods/misoRamen.JPG);
     background-size: cover;
     background-position: center;
+    height: calc(8em + 2vmin);
 }
 
 .box6 {
+    grid-area: box6;
     text-align: center;
     color: white;
+    height: calc(8em + 2vmin);
 }
 
 .box7 {
+    grid-area: box7;
     text-align: center;
     color: white;
+    height: calc(8em + 2vmin);
 }
 
 .box8{
+    grid-area: box8;
     background-image: url(./images/foods/cherry.JPG);
     background-size: cover;
     background-position: center;
     text-align: center;
     color: white;
-}
-
-.box9{
-    background-image: url(./images/places/yamaView.JPG);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box10{
-    /* background-image: url(./images/places/ginzanMain.JPG); */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box11{
-    /* background-image: url(./images/places/kitsune.JPG); */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box12{
-    background-image: url(./images/places/ginzanMain.JPG);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box13{
-    background-image: url(./images/places/winterLights.JPG);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box14{
-    /* background-image: url(./images/foods/cherry.JPG); */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box15{
-    /* background-image: url(./images/foods/cherry.JPG); */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.box16{
-    background-image: url(./images/places/kitsune.JPG);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: white;
-}
-
-.hideScroll::-webkit-scrollbar {
-    display: none;
-}
-
-.hideScroll2 {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+     height: calc(8em + 2vmin);
 }
