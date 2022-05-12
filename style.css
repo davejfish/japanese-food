@@ -14,6 +14,7 @@ body html {
 
 body {
     background-color: #D66853;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 header {
@@ -71,7 +72,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 1000px;
+    height: fit-content;
     font-family: 'Roboto Flex', sans-serif;
 }
 
@@ -106,6 +107,36 @@ footer {
     }
 }
 
+@supports (display: grid) {
+    @media screen and (min-width: 400px) {
+        .myGridPlaces {
+    display: grid;
+    width: 400px;
+    justify-content: center;
+    background-color: #364156;
+    grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "box9 box10"
+                    "box11 box12"
+                    "box13 box14"
+                    "box15 box16";
+    }
+    }
+
+    @supports (display: grid) {
+        @media screen and (min-width: 800px) {
+            .myGridPlaces {
+                display: grid;
+                width: 800px;
+                justify-content: center;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-areas: 
+                    "box9 box11 box13 box15"
+                    "box10 box12 box14 box16";
+            }
+        }
+    }
+}
 
 
 
@@ -164,6 +195,68 @@ footer {
 .box8{
     grid-area: box8;
     background-image: url(./images/foods/cherry.JPG);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+     height: calc(8em + 2vmin);
+}
+
+.box9 {
+    grid-area: box9;
+    background-image: url(./images/places/winterLights2.JPG);
+    background-size: cover;
+    background-position: center;
+    height: calc(8em + 2vmin);
+}
+
+.box10 {
+    grid-area: box10;
+    text-align: center;
+    color: white;
+    height: calc(8em + 2vmin);
+}
+
+.box11 {
+    grid-area: box11;
+    text-align: center;
+    color: white;
+    height: calc(8em + 2vmin);
+}
+
+.box12 {
+    grid-area: box12;
+    background-image: url(./images/places/kitsune.JPG);
+    background-size: cover;
+    background-position: center;
+    height: calc(8em + 2vmin);
+}
+
+.box13 {
+    grid-area: box13;
+    background-image: url(./images/places/dateView.JPG);
+    background-size: cover;
+    background-position: center;
+    height: calc(8em + 2vmin);
+}
+
+.box14 {
+    grid-area: box14;
+    text-align: center;
+    color: white;
+    height: calc(8em + 2vmin);
+}
+
+.box15 {
+    grid-area: box15;
+    text-align: center;
+    color: white;
+    height: calc(8em + 2vmin);
+}
+
+.box16 {
+    grid-area: box16;
+    background-image: url(./images/places/ginzanBridge.JPG);
     background-size: cover;
     background-position: center;
     text-align: center;
